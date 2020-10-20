@@ -25,7 +25,7 @@ The script is fairly simple to run, it takes the following optional parameters:
 
 * `--key_path` which takes a path argument that targets the text file containing your API key. By default this is `api_key.txt` in the current directory.
 * `--country_code_path` which takes a path argument that targets the text file containing the list of country codes to target. By default this is `country_codes.txt` in the current directory.
-* `--output_dir` which takes a path argument that specifies the folder to create the output CSV files for each country. By default this is `output/` in the current directory.
+* `--output_dir` which takes a path argument that specifies the folder to create the output CSV files for each country. By default this is `../Data/` in the current directory.
 
 ## License
 
