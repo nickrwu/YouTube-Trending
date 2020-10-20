@@ -75,7 +75,7 @@ def get_videos(items):
         trending_date = time.strftime("%y.%d.%m")
         tags = get_tags(snippet.get("tags", ["[none]"]))
         view_count = statistics.get("viewCount", 0)
-        duration = details.get("duration")
+        duration = details.get("duration")[2:len(details.get("duration"))]
 
         # This may be unclear, essentially the way the API works is that if a video has comments or ratings disabled
         # then it has no feature for it, thus if they don't exist in the statistics dict we know they are disabled
