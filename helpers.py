@@ -7,6 +7,9 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import train_test_split
 
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import StandardScaler
+
 # Function to Load Dataframe
 def load_df(filename):
     """
@@ -62,9 +65,9 @@ def preprocess(df):
     df.drop_duplicates(subset=['video_id'], keep='last', ignore_index=True)
 
     # Dropping unneeded columns
-    df.drop(columns=['country', 'likes', 'dislikes', 'comment_count', 'view_count', 
-    'trending_date', 'publishedAt', 'channelTitle', 'channelId', 'title', 'description', 'new_date_published',
-    'new_date_trending', 'video_id', 'tags', 'thumbnail_link', 'comments_disabled', 'duration',
+    df.drop(columns=['country', 'view_count', 'comment_count', 'likes', 'dislikes',
+    'trending_date', 'publishedAt', 'channelTitle', 'channelId', 'title', 'description', 'video_id', 'tags', 'thumbnail_link', 'new_date_published',
+    'new_date_trending', 'comments_disabled', 'duration',
     'ratings_disabled'], axis=0, inplace=True)
     
     # Drop missing values
@@ -87,6 +90,10 @@ def findOutliers(col):
 
     return np.array(outliers)
 
-
-
+def scaling(X,y):
+    scaler = ColumnTransformer([
+            ('standardize', StandardScaler(), 
+            ['tagCount','titleLength','comment_log','dislikes_log', 'views_log'])
+        ])
+    X[['tagCount','titleLength','comment_log','dislikes_log', 'views_log']] = scaler.fit_transform(X,y)
 
