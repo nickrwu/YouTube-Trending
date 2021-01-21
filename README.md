@@ -1,5 +1,5 @@
 ## YouTube Trending Project
-Analyzing data from the YouTube trending page in the US using data agreggated over October and December
+Analyzing data from the YouTube trending page in the US using data agreggated over October, December, and January
 
 Goal: 
 * To understand common characteristics of trending videos in the US
@@ -35,17 +35,26 @@ Goal:
         * 2.2.2 Exporting Curated Data
 * 3.Modeling
     * 3.1 Predicting Likes
-        * 3.1.1 Train-Test Split (80:20)
-        * 3.1.2 Linear Regreission
-        * 3.1.3 Decision Trees
+        * 3.1.1 Pre-processing Data
+            * 3.1.1.1 Train-Test Split (80:20)
+            * 3.1.1.2 Initializing Pre-processing Pipeline
+        * 3.1.2 Hyperparameter Tuning (Gridsearch)
+        * 3.1.3 Regressors
+            * 3.1.3.1 Linear Regression
+            * 3.1.3.2 Random Forest
+            * 3.1.3.3 XGBoost
         * 3.1.4 Random Forest
+            * 3.1.4.1 Feature Importance
+        * 3.1.5 Likes Evaluation
     * 3.2 Predicting Views
-        * 3.2.1 Train-Test Split (80:20)
-        * 3.2.2 Linear Regreission
-        * 3.2.3 Decision Trees
+        * 3.2.1 Pre-processing Data
+            * 3.2.1.1 Train-Test Split (80:20)
+            * 3.2.1.2 Initializing Pre-processing Pipeline
+        * 3.2.2 Hyperparameter Tuning (Gridsearch)
+        * 3.2.3 Regressors
+            * 3.2.3.1 Linear Regression
+            * 3.2.3.2 Random Forest
+            * 3.2.3.3 XGBoost
         * 3.2.4 Random Forest
-    * 3.3 Predicting Comment Count
-        * 3.3.1 Train-Test Split (80:20)
-        * 3.3.2 Linear Regreission
-        * 3.3.3 Decision Trees
-        * 3.3.4 Random Forest
+            * 3.2.4.1 Feature Importance
+        * 3.2.5 Views Evaluation
