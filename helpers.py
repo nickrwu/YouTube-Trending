@@ -63,7 +63,7 @@ def featureEng(df):
 def preprocess(df):
     # Dropping duplicate rows
     df.drop_duplicates(subset=['video_id'], keep='last', ignore_index=True)
-
+    
     # Dropping unneeded columns
     df.drop(columns=['country', 'view_count', 'comment_count', 'likes', 'dislikes',
     'trending_date', 'publishedAt', 'channelTitle', 'channelId', 'title', 'description', 'video_id', 'tags', 'thumbnail_link', 'new_date_published',
