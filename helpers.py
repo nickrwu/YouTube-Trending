@@ -24,7 +24,7 @@ def load_df(filename):
 # Feature Engineering & Preprocessing Data
 def featureEng(df):
     """
-
+    Creates new variables from existing data
     """
     # Adding Like/Dislike Ratio Column
     df['likeRatio'] = (df['likes']-df['dislikes'])/(df['likes']+df['dislikes'])
@@ -32,6 +32,7 @@ def featureEng(df):
     # Dropping rows with disabled comments and ratings
     df.drop(df[(df['comment_count'] == 0) | (df['ratings_disabled']) | (df['view_count'] == 0)].index,
     inplace=True)
+    
     # Adding Log of Ratings, Views, and Comments (Eliminate Skew)
     df['likes_log'] = np.log(df['likes'])
     df['views_log'] = np.log(df['view_count'])
@@ -43,8 +44,7 @@ def featureEng(df):
     df['new_date_published'] = df['publishedAt'].dt.date
     df['trending_date'] = pd.to_datetime(df['trending_date'], format="%y.%d.%m")
     df['new_date_trending'] = df['trending_date'].dt.date
-    df['days_lapse'] = df['new_date_trending'] - df['new_date_published']
-    df['days_lapse'] = df['days_lapse']/dt.timedelta(minutes=1)
+    df['days_lapse'] = (df['new_date_trending'] - df['new_date_published'])/dt.timedelta(days=1)
 
     # Breaking down 'duration' into Hour, Minutes, and Seconds
     df['durationHr'] = df['duration'].str.extract('(\d+)H').fillna(0).astype(int)
