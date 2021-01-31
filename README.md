@@ -33,6 +33,7 @@ Goal:
     * 2.2 Post-Processed Data
         * 2.2.1 Column Information
         * 2.2.2 Exporting Curated Data
+    * 2.3 Export Cleaned Data w/ All Columns
 * 3.Modeling
     * 3.1 Predicting Likes
         * 3.1.1 Pre-processing Data
@@ -58,3 +59,14 @@ Goal:
         * 3.2.4 Random Forest
             * 3.2.4.1 Feature Importance
         * 3.2.5 Views Evaluation
+    * 3.3 Predicting Comment Count
+        * 3.3.1 Pre-processing Data
+            * 3.3.1.1 Train-Test Split (80:20)
+            * 3.3.1.2 Initializing Pre-processing Pipeline
+        * 3.3.2 Hyperparameter Tuning (Gridsearch)
+        * 3.3.3 Regressors
+            * 3.3.3.1 Linear Regression
+            * 3.3.3.2 Decision Trees
+            * 3.3.3.3 Random Forest
+        * 3.3.4 Random Forest
+            * 3.1.4.1 Feature Importance
