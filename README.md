@@ -6,7 +6,7 @@ Goal:
 
 * Use this knowledge to build predictive models
 
-* To predict engagement (likes or comments) on a video in english speaking countries
+* To predict engagement (likes and views) on a video in the US
 
 ### Table of Contents:
 * 1.Exploratory Data Analysis
