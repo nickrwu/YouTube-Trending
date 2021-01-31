@@ -1,5 +1,7 @@
 ## YouTube Trending Project
-Analyzing data from the YouTube trending page in the US using data agreggated over October, December, and January
+![alt text](https://github.com/nickrwu/YouTube-Trending/blob/master/youtube-logo.png)
+
+Analyzing data from the YouTube trending page in the US using data agreggated over October, December, and January in 2020 and 2021
 
 Goal: 
 * To understand common characteristics of trending videos in the US
