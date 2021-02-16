@@ -1,5 +1,6 @@
 ## YouTube Trending Project
 ![alt text](https://github.com/nickrwu/YouTube-Trending/blob/master/youtube-logo.png)
+### [Project Presentation Link](https://drive.google.com/file/d/1uf0sMXe4I9CMLMrsC8EncS9I0Y35aHlg/view?usp=sharing)
 
 Analyzing data from the YouTube trending page in the US using data agreggated over October, December, and January in 2020 and 2021
 
